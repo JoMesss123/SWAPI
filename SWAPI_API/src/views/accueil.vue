@@ -175,8 +175,14 @@ export default {
   }
 
   button[type="submit"] {
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #FF0000;    
+    background-image: url("../assets/img/star-wars-2369317_640.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #04003d;
+    font-size: x-large;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -184,6 +190,8 @@ export default {
   }
 
   button[type="submit"]:hover {
+    background-image: url("../assets/img/star-wars-2908144_640.png");
     background-color: #0056b3;
+    color: #000000;
   }
 </style>
