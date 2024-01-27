@@ -31,7 +31,7 @@
         return this.favorites.some(item => item.name === this.selectedItem.name);
       },
       favoriteButtonText() {
-        return this.isFavorite ? 'Remove from Favorites' : 'Add to Favorites';
+        return this.isFavorite ? 'Retirer des Favoris' : 'Ajouter aux Favoris';
       }
     },
     methods: {
@@ -70,7 +70,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .detail-modal {
     display: flex;
     justify-content: center;
@@ -85,10 +85,17 @@
   }
   
   .detail-content {
-    background-color: white;
+    background-image: url("../assets/img/img_background_modal/5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     padding: 20px;
     border-radius: 5px;
-    position: relative; /* Added */
+    position: relative; 
+    max-height: 80%;
+    overflow-y: auto;
+    
   }
   
   .close {
@@ -96,11 +103,22 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
+    font-size: 30px;
+    color: #fff;
   }
   
   .favorite {
     background-color: #ffc107;
     color: #000;
+  }
+
+  li{
+    background-color: rgba(0, 0, 0, 0.678);
+    color: #F6E00C;
+    border: #000000 2px solid;
+    padding: 1rem;
+    border-radius: 10px;
+   
   }
   </style>
   

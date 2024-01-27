@@ -117,20 +117,31 @@
 
     ul {
         background-color: rgba(0, 0, 0, 0.521);
+        padding: 0;
 
     }
 
     li {
         list-style-type: none;
         font-size: 24px;
-        color: #ffffff;
+        color:#F6E00C;
         font-family: 'Miltonian', serif;
+        text-transform: uppercase;
+        border: #000000 2px solid;
+        padding: 1rem;
+        border-radius: 10px;
+        margin: 1rem;
     }
 
-    a {
-        text-decoration: none;
-        color: #ffffff;
+    li :hover {
+        background-color: rgba(0, 0, 0, 0.678);
+        color: #F6E00C;
+        border: #f60c0c 2px solid;
+        padding: 1rem;
+        border-radius: 10px;
     }
+
+   
 
     .personnnage {
         background-image: url("../assets/img/92865241-af62-46c2-82f8-cab055340166.png");
@@ -139,6 +150,7 @@
         background-repeat: no-repeat;
         width: 1200px;
         padding-bottom: 3rem;
+        margin: 1rem;
       
     }
 
@@ -149,6 +161,7 @@
         background-repeat: no-repeat;
         width: 1200px;
         padding-bottom: 3rem;
+        margin: 1rem;
     }
 
     .films {
@@ -158,6 +171,7 @@
         background-repeat: no-repeat;
         width: 1200px;
         padding-bottom: 3rem;
+        margin: 1rem;
     }
 
     .planetes {
@@ -167,5 +181,6 @@
         background-repeat: no-repeat;
         width: 1200px;
         padding-bottom: 3rem;
+        margin: 1rem;
     }
 </style>
