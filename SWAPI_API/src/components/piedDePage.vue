@@ -5,7 +5,7 @@
                 <img src="../assets/img/Star_Wars_Logo.svg.png" atl="logo" />
             </div>
             <div class="footer__text">
-                <p>© 2021 - SWAPI_API</p>
+                <p>© 2024 - SWAPI_API</p>
                 <br>
                 <p>Créé par : Jonathan Claes</p>
             </div>

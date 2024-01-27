@@ -1,26 +1,79 @@
 <template>
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo"><img src="../assets/img/Star_Wars_Logo.svg.png" atl="logo"/> </div>
+    <div>
+        <nav class="navbar">
 
-        <!-- MENUS -->
-        <ul class="menu">
-            <li><RouterLink to="/">Accueil</RouterLink></li>
-            <li><RouterLink to="/Liste">Liste Complète</RouterLink></li>
-            <li><RouterLink to="/Favoris">Favoris</RouterLink></li>
-            
-        </ul>
-    </nav>
+            <div class="logo"><img src="../assets/img/602bb87d5c5b2300043add96.png" alt="logo" /></div>
+
+            <div class="navBar_div_recherche">
+                <ul class="menu">
+                    <li>
+                        <RouterLink to="/">Accueil</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Liste">Liste Complète</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Favoris">Favoris</RouterLink>
+                    </li>
+                </ul>
+
+                <div class="search-bar">
+                    <input type="text" v-model="searchQuery" placeholder="Rechercher dans SWAPI..." />
+                    <button @click="search">Rechercher</button>
+                </div>
+
+
+                <DetailComponent v-if="showModal" :selectedItem="selectedItem" @close="closeModal" />
+          </div> 
+         </nav> 
+    </div>
+
+   
+
+
+
 </template>
+
 <script>
-    import { RouterLink } from 'vue-router'
-    
+    import {
+        RouterLink
+    } from 'vue-router'
+    import DetailComponent from "@/components/DetailComponent.vue";
+
+    export default {
+        components: {
+            RouterLink,
+            DetailComponent
+        },
+        data() {
+            return {
+                searchQuery: "",
+                showModal: false,
+                selectedItem: null
+            };
+        },
+        methods: {
+            async search() {
+
+                const response = await fetch(`https://swapi.dev/api/people/?search=${this.searchQuery}`);
+                const data = await response.json();
+
+
+                if (data.results && data.results.length > 0) {
+                    this.selectedItem = data.results[0];
+                    this.showModal = true;
+                }
+            },
+            closeModal() {
+                this.showModal = false;
+                this.selectedItem = null;
+            }
+        }
+    };
 </script>
 <style scoped>
-
-
-.navbar {
-        background-image:url("../assets/img/1537a5d3d78f91618911f729116beeda.jpg") ;
+    .navbar {
+        background-image: url("../assets/img/1537a5d3d78f91618911f729116beeda.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -29,25 +82,32 @@
         align-items: center;
         justify-content: space-between;
         background-color: rgba(46, 34, 27);
-         /*RGB
-#2e221b	rgb(46, 34, 27)
-#eaa049	rgb(234, 160, 73)
-#9b6232	rgb(155, 98, 50)
-#b19b79	rgb(177, 155, 121)
-#8c848c	rgb(140, 132, 140)*/
+
         color: #fff;
         width: 1200px;
         margin: 0 auto;
+
+
+    }
+
+    .navBar_div_recherche {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
        
-        
+
+        color: #fff;
+        width: 1200px;
+        margin: 0 auto;
     }
 
-    .img{
+    .img {
         width: 100%;
-      
+
     }
 
-   
+
     .menu {
         display: flex;
         font-size: 24px;
@@ -73,18 +133,17 @@
         background-position: center;
         background-repeat: no-repeat;
 
-       
-       
+
+
     }
 
-    .menu a.router-link-exact-active{
+    .menu a.router-link-exact-active {
         background-image: url("../assets/img/star-wars-2369317_640.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
 
-        
-        
-    }
 
+
+    }
 </style>
