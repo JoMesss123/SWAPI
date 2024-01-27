@@ -3,6 +3,8 @@ import accueilVue from '../views/accueil.vue'
 import ListeVue from '../views/Liste.vue'
 import FavorisVue from '../views/Favoris.vue'
 import erreur from '../views/erreur.vue'
+import DetailComponent from '../components/DetailComponent.vue'
+
 
 
 
@@ -28,10 +30,9 @@ const router = createRouter({
 
   {
     path: '/liste/:id',
-    name: 'ListeVue',
-    component: ListeVue,
+    name: 'ListeDetails',
+    component: DetailComponent,
     props: true
-
   },
   {
     path: '/:pathMatch(.*)',
@@ -42,5 +43,7 @@ const router = createRouter({
 
 ]
 })
+
+
 
 export default router

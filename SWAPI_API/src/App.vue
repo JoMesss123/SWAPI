@@ -1,6 +1,7 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from '../src/components/NavBar.vue'
+import piedDePage from '../src/components/piedDePage.vue'
 
 
 export default {
@@ -8,6 +9,7 @@ export default {
   components: {
     RouterLink,
     NavBar,
+    piedDePage,
   },
 }
 
@@ -19,6 +21,7 @@ export default {
 
   <NavBar></NavBar>
   <RouterView/>
+  <piedDePage></piedDePage>
   </body>
   
   

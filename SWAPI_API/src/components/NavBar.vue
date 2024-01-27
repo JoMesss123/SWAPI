@@ -17,7 +17,14 @@
     
 </script>
 <style scoped>
+
+
 .navbar {
+        background-image:url("../assets/img/1537a5d3d78f91618911f729116beeda.jpg") ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -31,6 +38,7 @@
         color: #fff;
         width: 1200px;
         margin: 0 auto;
+       
         
     }
 
@@ -42,7 +50,7 @@
    
     .menu {
         display: flex;
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .menu a {
@@ -51,19 +59,32 @@
     }
 
     .menu li {
+        background-image: url("../assets/img/star-wars-2908144_640.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         list-style: none;
         padding: 5px 14px;
     }
 
     .menu li:hover {
-        background-color:rgb(155, 98, 50);
-        border-radius: 5px;
+        background-image: url("../assets/star-wars-2369317_640.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+       
+       
     }
 
     .menu a.router-link-exact-active{
-        background-color: rgb(155, 98, 50);
-        border-radius: 5px;
-        padding: 0px 15px;
+        background-image: url("../assets/img/star-wars-2369317_640.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        
+        
     }
 
 </style>
