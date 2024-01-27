@@ -47,6 +47,47 @@
   </script>
   
   <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Miltonian&display=swap');
+
+  h1 {
+    color: rgb(255, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    font-family:'Cinzel', serif ;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    margin: 0.5rem;
+  }
+
+  button {
+    background-color: #FF0000;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: #F6E00C 2px solid;
+  }
+
+  button:hover {
+    background-color: #4400ff;
+    
+  }
+
+  
  
   </style>
   
