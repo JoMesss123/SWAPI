@@ -18,6 +18,8 @@
   </script>
   
   <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Miltonian&display=swap');
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -28,10 +30,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color:#F6E00C;
+    font-family: 'Miltonian', serif;
+    font-size: x-large;
   }
   
   .modal {
-    background-color: #fff;
+    background-image: url("../assets/img/media-75965-1024x576.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    
+    width: 80%;
+    max-width: 800px;
+    height: 50%;
+
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);

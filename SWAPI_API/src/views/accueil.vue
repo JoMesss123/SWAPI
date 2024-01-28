@@ -24,7 +24,7 @@
         <button type="submit">S'inscrire</button>
       </form>
     </div>
-    <Modal v-if="showModal" @close="closeModal">Inscription réussie!</Modal>
+    <Modal v-if="showModal" @close="closeModal">Bienvenue dans le coté obscure de la Force</Modal>
   </div>
 
 
@@ -194,4 +194,6 @@ export default {
     background-color: #0056b3;
     color: #000000;
   }
+
+  
 </style>
