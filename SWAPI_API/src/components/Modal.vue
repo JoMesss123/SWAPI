@@ -37,7 +37,7 @@
   }
   
   .modal {
-    background-image: url("../assets/img/media-75965-1024x576.jpg");
+    background-image: url("../assets/img/0ab2594de60ab1a81cbccbf70f33d876.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

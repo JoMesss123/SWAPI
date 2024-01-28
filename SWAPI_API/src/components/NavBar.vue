@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar">
 
-            <div class="logo"><img src="../assets/img/602bb87d5c5b2300043add96.png" alt="logo" /></div>
+            <div class="logo"><img src="../assets/img/logo.gif" alt="logo" /></div>
 
             <div class="navBar_div_recherche">
                 <ul class="menu">
@@ -102,7 +102,8 @@
         margin: 0 auto;
     }
 
-    .img {
+    img {
+        max-width: 400px;
         width: 100%;
 
     }

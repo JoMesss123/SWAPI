@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="favoris">
       <h1>Favoris</h1>
       <ul>
         <li v-for="(favorite, index) in favorites" :key="index">
@@ -50,6 +50,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Miltonian&display=swap');
 
+  .favoris {
+    background-image: url("../assets/img/ca82125c0ec71105aa02ee3730ecccbc.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Cinzel', serif;
+    font-size: x-large;
+
+    margin-top: 1rem;
+    max-width: 1200px;
+    padding: 1rem;
+  }
   h1 {
     color: rgb(255, 0, 0);
     font-size: 50px;
